@@ -1,16 +1,19 @@
+const myApples = 4;
+const friendApples = 2;
+let total = myApples + friendApples;
+
+document.getElementById("myAppleElement").textContent = myApples;
+document.getElementById("friendAppleElement").textContent = friendApples;
+document.getElementById("totalApplesElement").textContent = total;
+
 const themeSelector = document.querySelector('#themeSelector');
-const logo = document.querySelector('#logo');
 const body = document.body;
 
 function changeTheme() {
-  const currentTheme = themeSelector.value;
-
-  if (currentTheme === 'dark') {
+  if (themeSelector.value === 'dark') {
     body.classList.add('dark');
-    logo.src = 'byui-logo-white.png';
   } else {
     body.classList.remove('dark');
-    logo.src = 'byui-logo-blue.png';
   }
 }
 
