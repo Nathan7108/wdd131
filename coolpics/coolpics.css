@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
 
-/* CSS Variables */
 :root {
     --primary-color: #52489c;
     --secondary-color: #59c3c3;
@@ -11,7 +10,6 @@
     --secondary-font: 'Mooli', sans-serif;
 }
 
-/* Global Styles */
 body {
     font-family: var(--primary-font);
     font-size: 1.2em;
@@ -21,7 +19,6 @@ body {
     padding: 0;
 }
 
-/* Header */
 header {
     background-color: var(--primary-color);
     color: var(--text-light);
@@ -37,7 +34,6 @@ nav {
     margin-top: 10px;
 }
 
-/* Fake Link Styling */
 .fake-link {
     color: white;
     cursor: pointer;
@@ -51,7 +47,6 @@ nav {
     background-color: var(--accent-color);
 }
 
-/* Main Gallery */
 main {
     padding: 20px;
     text-align: center;
@@ -70,7 +65,6 @@ img {
     border-radius: 8px;
 }
 
-/* Footer */
 footer {
     text-align: center;
     background-color: var(--secondary-color);
@@ -79,7 +73,6 @@ footer {
     margin-top: 20px;
 }
 
-/* Media Queries */
 @media (min-width: 700px) {
     .gallery {
         grid-template-columns: repeat(2, 1fr);

@@ -1,4 +1,3 @@
-// JavaScript to toggle navigation menu in mobile view
 const menuButton = document.querySelector('.menu-btn');
 const navLinks = document.querySelector('.nav-links');
 
