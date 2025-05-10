@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
+
+/* CSS Variables */
+:root {
+    --primary-color: #52489c;
+    --secondary-color: #59c3c3;
+    --accent-color: #f45b69;
+    --text-dark: #333;
+    --text-light: #ebebeb;
+    --primary-font: Arial, Helvetica, sans-serif;
+    --secondary-font: 'Mooli', sans-serif;
+}
+
+/* Global Styles */
+body {
+    font-family: var(--primary-font);
+    font-size: 1.2em;
+    color: var(--text-dark);
+    background-color: var(--text-light);
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+}
+
+nav {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+/* Fake Link Styling */
+.fake-link {
+    color: white;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    transition: background-color 0.3s;
+}
+
+.fake-link:hover {
+    background-color: var(--accent-color);
+}
+
+/* Main Gallery */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+img {
+    max-width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* Media Queries */
+@media (min-width: 700px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1000px) {
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    nav {
+        display: flex;
+    }
+
+    .menu-btn {
+        display: none;
+    }
+}
