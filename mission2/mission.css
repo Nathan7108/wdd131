@@ -50,7 +50,6 @@ body.dark .subtitle {
   border-color: #005a93;
 }
 
-/* Dark mode specific styles for the selector */
 body.dark .theme-selector {
   background-color: #444;
 }
