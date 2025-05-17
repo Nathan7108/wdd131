@@ -32,6 +32,30 @@ nav {
     display: flex;
     gap: 15px;
     margin-top: 10px;
+    width: 100%;
+    position: relative;
+}
+
+.menu-btn {
+    display: block;
+    background: var(--primary-color);
+    color: var(--text-light);
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1.2em;
+    border-radius: 5px;
+}
+
+.nav-links {
+    background-color: var(--primary-color);
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 
 .fake-link {
@@ -79,6 +103,25 @@ footer {
     }
 }
 
+@media (min-width: 700px) {
+    .menu-btn {
+        display: none;
+    }
+
+    .nav-links {
+        display: flex !important;
+        flex-direction: row;
+        gap: 15px;
+        margin-top: 0;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .nav-links.hide {
+        display: flex !important;
+    }
+}
+
 @media (min-width: 1000px) {
     .gallery {
         grid-template-columns: repeat(3, 1fr);
@@ -90,5 +133,73 @@ footer {
 
     .menu-btn {
         display: none;
+    }
+}
+
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.popup-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    max-height: 50vh;
+    width: 100%;
+    height: 50vh;
+    object-fit: contain;
+}
+
+.popup-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 10px;
+}
+
+.gallery img {
+    cursor: pointer;
+}
+
+.hide {
+    display: none;
+}
+
+nav {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+@media (max-width: 700px) {
+    .nav-links {
+        display: none;
+    }
+
+    .nav-links.hide {
+        display: none;
+    }
+
+    .nav-links:not(.hide) {
+        display: flex;
+    }
+
+    nav {
+        flex-direction: column;
     }
 }
