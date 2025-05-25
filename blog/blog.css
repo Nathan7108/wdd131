@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  color: #473144;
+  line-height: 1.6;
+}
+a {
+  color: #AF1B3F;
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+.skiptocontent a {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #473144;
+  color: #fff;
+  padding: 8px 16px;
+  z-index: 100;
+}
+.skiptocontent a:focus {
+  top: 0;
+}
+
+header {
+  text-align: center;
+  padding: 1rem 0;
+}
+header h1 {
+  font-family: 'Lora', serif;
+  font-size: 2rem;
+  color: #473144;
+  margin-bottom: 0.5rem;
+}
+.main-nav {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 2rem;
+  list-style: none;
+  justify-content: end;
+  margin: 0;
+  padding: 0.5rem 2rem;
+  border-top: 1px solid #EFC69B;
+  border-bottom: 1px solid #EFC69B;
+}
+.main-nav li a {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #AF1B3F;
+}
+
+.blog-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.book-review {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 1rem 2rem;
+  margin-bottom: 3rem;
+}
+.review-meta {
+  text-align: right;
+  font-size: 0.9rem;
+}
+.review-meta time {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.review-meta .age-range,
+.review-meta .genre,
+.review-meta .rating {
+  margin-bottom: 0.25rem;
+}
+
+.review-content h2 {
+  font-family: 'Lora', serif;
+  font-size: 1.25rem;
+  color: #AF1B3F;
+  margin-bottom: 0.5rem;
+}
+.review-content figure {
+  margin-bottom: 0.5rem;
+}
+.review-content img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.review-content p {
+  margin-bottom: 0.5rem;
+}
+
+.filters {
+  padding-left: 1rem;
+  font-size: 0.9rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.8rem;
+  color: #473144;
+}
