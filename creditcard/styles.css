@@ -1,0 +1,154 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  font-family: sans-serif;
+  background: #f7f7f7;
+}
+
+#form-container {
+  display: grid;
+  grid-template-rows: auto auto;
+  row-gap: 2rem;
+  justify-items: end;
+  padding-right: 0;
+  margin-right: 115px;
+}
+
+.cards-stack {
+  display: grid;
+  grid-template-areas: "overlap";
+  width: 400px;
+  position: relative;
+}
+.cards-stack > .card {
+  grid-area: overlap;
+  width: 400px;
+  height: 240px;
+  border-radius: 8px;
+  padding: 1.2rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.card-back {
+  background: #ddd;
+  transform: translateY(35px) translateX(140px);
+  margin-left: -50px;
+}
+
+.card-front {
+  background: #ececec;
+  z-index: 1;
+}
+
+.card .stripe {
+  height: 40px;
+  background: #333;
+  margin: -1.2rem -1.2rem 1rem;
+}
+
+.card-back .stripe {
+  margin-top: 1rem;
+}
+
+.card .top-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.top-row .total {
+  font-size: 0.9rem;
+  margin-right: 0.5rem;
+}
+.top-row .amount {
+  font-size: 1.1rem;
+  margin-right: auto;
+}
+.top-row .logo img {
+  height: 40px;
+}
+
+label {
+  display: block;
+  font-size: 0.75rem;
+  margin-bottom: 0.25rem;
+}
+
+input {
+  width: 100%;
+  padding: 0.4rem;
+  font-size: 0.8rem;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  background: #fff;
+}
+
+.row {
+  display: flex;
+  gap: 1rem;
+}
+
+.holder { 
+  flex: 2;
+}
+
+.exp {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.exp-inputs {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.exp-inputs input {
+  width: 100%;
+  min-width: 70px;
+}
+
+#card-btn {
+  padding: 0.8rem 1.5rem;
+  font-size: 0.9rem;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-right: 55px;
+  transform: translateX(140px);
+}
+#card-btn:hover {
+  background: #222;
+}
+
+.cvv {
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.cvv label {
+  font-size: 0.75rem;
+  color: #333;
+  margin-bottom: 0.25rem;
+}
+
+.cvv input {
+  width: 60px;
+  text-align: center;
+  padding: 0.4rem;
+  margin: 0;
+}
