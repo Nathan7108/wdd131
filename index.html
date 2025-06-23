@@ -1,53 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Welcome</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <style>
-      body {
-        font-family: Arial, sans-serif;
+<head>
+  <meta charset="UTF-8" />
+  <title>WDD 131 Project Gallery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Montserrat', Arial, sans-serif;
+      background: #f7fafc;
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      text-align: center;
+      padding: 2.5rem 1rem 1.5rem 1rem;
+    }
+    header h1 {
+      font-size: 2.3rem;
+      margin: 0 0 0.5rem 0;
+      color: #222;
+      letter-spacing: 1px;
+      font-weight: 700;
+    }
+    header p {
+      color: #666;
+      font-size: 1.1rem;
+      margin: 0;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 2rem auto 2.5rem auto;
+      padding: 0 1rem;
+    }
+    .card {
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      padding: 2rem 1.5rem 1.5rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      transition: transform 0.18s cubic-bezier(.4,2,.6,1), box-shadow 0.18s;
+      border: 1px solid #ececec;
+      position: relative;
+      overflow: hidden;
+    }
+    .card::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 5px;
+      background: linear-gradient(90deg, #1B98E0 0%, #59c3c3 100%);
+      border-radius: 18px 18px 0 0;
+    }
+    .card:hover {
+      transform: translateY(-4px) scale(1.025);
+      box-shadow: 0 8px 32px rgba(27,152,224,0.10);
+      border-color: #b6e0fa;
+    }
+    .card-title {
+      font-size: 1.18rem;
+      color: #1B98E0;
+      margin-bottom: 0.4rem;
+      font-weight: 700;
+      text-align: left;
+      letter-spacing: 0.5px;
+    }
+    .card-desc {
+      font-size: 1rem;
+      color: #444;
+      margin-bottom: 1.2rem;
+      text-align: left;
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      font-weight: 500;
+    }
+    .card-link {
+      text-decoration: none;
+      background: linear-gradient(90deg, #1B98E0 0%, #59c3c3 100%);
+      color: #fff;
+      padding: 9px 22px;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: background 0.18s, box-shadow 0.18s;
+      box-shadow: 0 2px 8px rgba(27,152,224,0.07);
+      border: none;
+      outline: none;
+      margin-top: auto;
+      letter-spacing: 0.5px;
+      display: inline-block;
+    }
+    .card-link:hover, .card-link:focus {
+      background: linear-gradient(90deg, #59c3c3 0%, #1B98E0 100%);
+      box-shadow: 0 4px 16px rgba(27,152,224,0.13);
+      color: #fff;
+    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.4rem;
+      }
+      .gallery {
+        gap: 1rem;
+      }
+      .card {
+        padding: 1.2rem 0.7rem 1rem 0.7rem;
+      }
+      .card-title, .card-desc {
         text-align: center;
-        padding: 50px;
-        background-color: #f9f9f9;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
       }
-      a {
-        text-decoration: none;
-        background-color: #006EB6;
-        color: white;
-        padding: 12px 24px;
-        border-radius: 6px;
-        font-size: 18px;
-        display: inline-block;
-        margin: 10px 0;
-      }
-      a:hover {
-        background-color: #005b98;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>Welcome to my WDD 131 Repository</h1> 
-
-    <p>View the Mission Statement page</p>
-    <a href="mission/index.html">View Mission Statement</a>
-
-    <p>View the apples page with light/dark mode</p>
-    <a href="apples/index.html">View Apple Calculator</a>
-
-    <p>View the Media Query</p>
-    <a href="media/media-query.html">View Media Query</a>
-
-    <p>View the Cool Pics page</p>
-    <a href="coolpics/index.html">View Cool Pics</a>
-
-    <p>View the Blogs page</p>
-    <a href="blog/index.html">View Blogs</a>
-
-    <p>View the Credit Card page</p>
-    <a href="creditcard/index.html">View Credit Card</a>
-
-    <p>View the Register page</p>
-    <a href="register/index.html">View Register</a>
-  </body>
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>WDD 131 Project Gallery</h1>
+    <p>Explore all my course projects below!</p>
+  </header>
+  <section class="gallery">
+    <div class="card">
+      <div class="card-title">Mission Statement</div>
+      <div class="card-desc">A simple, responsive mission statement page.</div>
+      <a class="card-link" href="mission/index.html">View Mission Statement</a>
+    </div>
+    <div class="card">
+      <div class="card-title">Apple Calculator</div>
+      <div class="card-desc">A calculator with light/dark mode for apples.</div>
+      <a class="card-link" href="apples/index.html">View Apple Calculator</a>
+    </div>
+    <div class="card">
+      <div class="card-title">Media Query Demo</div>
+      <div class="card-desc">A demonstration of responsive layouts using media queries.</div>
+      <a class="card-link" href="media/media-query.html">View Media Query</a>
+    </div>
+    <div class="card">
+      <div class="card-title">Cool Pics</div>
+      <div class="card-desc">A modern photo gallery with interactive features.</div>
+      <a class="card-link" href="coolpics/index.html">View Cool Pics</a>
+    </div>
+    <div class="card">
+      <div class="card-title">Blogs</div>
+      <div class="card-desc">A blog page layout with sample posts.</div>
+      <a class="card-link" href="blog/index.html">View Blogs</a>
+    </div>
+    <div class="card">
+      <div class="card-title">Credit Card Form</div>
+      <div class="card-desc">A styled, accessible credit card input form.</div>
+      <a class="card-link" href="creditcard/index.html">View Credit Card</a>
+    </div>
+    <div class="card">
+      <div class="card-title">Register</div>
+      <div class="card-desc">A registration form with validation.</div>
+      <a class="card-link" href="register/index.html">View Register</a>
+    </div>
+    <div class="card">
+      <div class="card-title">Recipe Book</div>
+      <div class="card-desc">A responsive recipe book with search and ratings.</div>
+      <a class="card-link" href="recipe/index.html">View Recipe</a>
+    </div>
+  </section>
+</body>
 </html>
