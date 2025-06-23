@@ -8,7 +8,6 @@ const recipes = [
   }
 ];
 
-
 function renderRecipes() {
   const container = document.querySelector('.recipes');
   container.innerHTML = '';
@@ -19,7 +18,7 @@ function renderRecipes() {
 
     card.innerHTML = `
       <div class="recipe-image">
-        <img src="${recipe.image}" alt="${recipe.name}">
+        <img src="${recipe.image}" alt="${recipe.name}" width="400" height="300">
       </div>
       <div class="recipe-info">
         <div class="tags">

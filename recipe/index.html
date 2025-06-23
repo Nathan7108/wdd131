@@ -13,19 +13,29 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="recipes.css">
   <link rel="icon" href="images/recipe-book.png" type="image/png">
+  <link rel="preload" as="image" href="images/apple-crisp.jpg">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap">
+  </noscript>
   <title>RecipeBook</title>
 </head>
 <body>
   <header>
-    <img src="images/recipe-book.png" alt="RecipeBook" style="height:48px;vertical-align:middle;">
-    <span style="font-family: 'Amatic SC', cursive; font-size:2.5rem; vertical-align:middle;">RecipeBook</span>
-  </header>
+  <img src="images/recipe-book.png" alt="RecipeBook" width="48" height="48" style="height:48px;vertical-align:middle;">
+  <span style="font-family: 'Amatic SC', cursive; font-size:2.5rem; vertical-align:middle;">RecipeBook</span>
+</header>
   <main>
     <form class="search-form">
       <input type="text" placeholder="Find a recipe" aria-label="Find a recipe">
       <button type="submit"><img src="images/search.svg" alt="Search"></button>
     </form>
-    <section class="recipes"></section>
+    <section class="recipes">
+      <picture>
+        <source srcset="images/apple-crisp.webp" type="image/webp">
+        <img src="images/apple-crisp.jpg" alt="Apple Crisp" width="400" height="300">
+      </picture>
+    </section>
   </main>
   <footer>
     <span class="social">
